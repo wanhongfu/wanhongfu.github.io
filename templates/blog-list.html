@@ -1,0 +1,17 @@
+<div class="bs-docs-section" id="index" ng-controller="IndexListCtrl">
+	<div class="row">
+		<div class="col-lg-10">
+			<div class="well bs-component">
+			<table class="table table-hover" id="index-list">
+		      <tbody>				        
+		        <tr ng-repeat="item in indexList">
+		          <td><h4><a href="#!/blogs/{{item.path}}">{{item.title}}</a> </h4></td>
+		          <td class="text-center"><h5>Posted @ {{item.date}}</h5><td>
+		        </tr>							        
+		      </tbody>
+		    </table>
+			</div>	    
+		</div>
+
+	</div>
+</div>
