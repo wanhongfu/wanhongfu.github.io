@@ -1,5 +1,6 @@
 Scala Trait
---------------
+-------
+***
 
 Trait是Scala里的一个新的语言特性,和Java里的interface有点接近,但又类似于Class, trait可以有属性和方法实现. 本文简单的比较了下Scala里trait和class的不同点.
 
