@@ -86,3 +86,7 @@ Trait是Scala里的一个新的语言特性,和Java里的interface有点接近,�
 所以 trait 的 `getContent` 函数的调用顺序为 `Pad -> Reverse -> Uppercase -> BasicStringSource`, 但由于 `super`, 最终执行顺序又和声明顺序相同.
 
 
+ _(END)_ 
+ 
+*** 
+ _post @ 2014-10-20 by wanhong_
