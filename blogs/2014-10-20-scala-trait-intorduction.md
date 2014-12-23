@@ -85,8 +85,9 @@ Trait是Scala里的一个新的语言特性,和Java里的interface有点接近,�
 
 所以 trait 的 `getContent` 函数的调用顺序为 `Pad -> Reverse -> Uppercase -> BasicStringSource`, 但由于 `super`, 最终执行顺序又和声明顺序相同.
 
+其实以上介绍的特性又叫 **Stakable Modification**, 参考Scala编程书里的翻译叫**可堆叠的改变**,有点拗口,大致意思是Trait可以让你改变类方法的行为，它们能够让你通过堆叠这些改动的方式做到这点, StackOverflow上有这样[一篇关于 Stack Modification 回答](http://stackoverflow.com/questions/852101/what-are-stackable-modifications), 可以参考一下.
 
  _(END)_ 
  
 *** 
- _post @ 2014-10-20 by wanhong_
+ _post on 2014-10-20 by wanhong_
