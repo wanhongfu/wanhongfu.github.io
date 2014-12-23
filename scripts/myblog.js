@@ -18,11 +18,6 @@
              if (value != null) {
                html = converter.makeHtml(value);
                element.html(html);
-               _ref = document.body.querySelectorAll('pre code');
-               for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-                 el = _ref[_i];
-                 hljs.highlightBlock(el);
-               }
              }
            });
          };
