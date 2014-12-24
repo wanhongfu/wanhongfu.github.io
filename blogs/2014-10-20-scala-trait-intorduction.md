@@ -2,7 +2,7 @@ Scala Trait
 -------
 ***
 
-Trait是Scala里的一个新的语言特性,和Java里的interface有点接近,但又类似于Class, trait可以有属性和方法实现. 本文简单的比较了下Scala里trait和class的不同点.
+Trait是Scala里的一个新的语言特性,和Java里的interface有点接近,但又类似于Class, trait可以有属性和方法实现. 本文简单的比较了下Scala里trait和class的一些不同点.
 
 ###1. Scala Trait的主构造函数不能包含任何参数声明
 
@@ -63,7 +63,7 @@ Trait是Scala里的一个新的语言特性,和Java里的interface有点接近,�
 		}
 	}
 
-我们分别定义了 `Uppercase`, `Reverse`, `Pad` 三个trait实现对 `StringSource` 中的抽象函数 `getContent()` 进行 _override_, 注意这里的 **abstract override** 是必须的. 为了便于观察,每个实现函数中我都添加了 `println` 语句, 我们再用以下代码来进行测试
+我们分别定义了 `Uppercase`, `Reverse`, `Pad` 三个trait实现对 `StringSource` 中的抽象函数 `getContent()` 进行 _override_, 注意这里的 **abstract override** 是必须的. 为了便于观察,每个实现函数中我都添加了 `println()` 语句, 我们再用以下代码来进行测试
 
 	val source1 = new BasicStringSource("Hello World") with Uppercase with Reverse with Pad
 	println(source1.getContent)
@@ -76,14 +76,14 @@ Trait是Scala里的一个新的语言特性,和Java里的interface有点接近,�
 	>In Pad, content is 'DLROW OLLEH*********'
 	>DLROW OLLEH*********
 
-由结果可知, 对象 `source1` 的声明顺序是 `BasicStringSource -> Uppercase -> Reverse -> Pad`, 但根据以上输出可知
+对象 `source1` 的声明顺序是 `BasicStringSource -> Uppercase -> Reverse -> Pad`, 但根据以上输出可得出
 
 *  `Pad` 的 `super.getContent` 指向并调用的是 `Reverse` 的 `getContent`
 *  `Reverse` 的 `super.getContent` 再调用 `Uppercase` 的 `getContent`
 *  `Uppercase` 的 `super.getContent` 再调用 `BasicStringSource` 的 `getContent`,  此时便有了第一行输出.
 *  `BasicStringSource` 的 `getContent` 返回到 `Uppercase` 的 `getContent` , 便有了第二行输出, 依此类推...   
 
-所以 trait 的 `getContent` 函数的调用顺序为 `Pad -> Reverse -> Uppercase -> BasicStringSource`, 但由于 `super`, 最终执行顺序又和声明顺序相同.
+所以 `source1`  的 `getContent` 函数的调用顺序为 `Pad -> Reverse -> Uppercase -> BasicStringSource`, 但由于 `super`, 最终执行顺序又和声明顺序相同.
 
 其实以上介绍的特性又叫 **Stakable Modification**, 参考"Scala编程"这本书里的翻译叫**可堆叠的改变**,有点拗口,大致意思是Trait可以让你改变类方法的行为，它们能够让你通过堆叠这些改动的方式做到这点, StackOverflow上有这样[一篇关于 Stackable Modification 回答](http://stackoverflow.com/questions/852101/what-are-stackable-modifications), 可以参考一下.
 
