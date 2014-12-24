@@ -38,7 +38,6 @@
 	app.controller('IndexListCtrl', function($scope, $routeParams, indexService) {
 	    return indexService.async().then(function(data) {	    	
 	      $scope.indexList = data;
-	      indexService.indexData = data;
 	    });
 	  });
 
