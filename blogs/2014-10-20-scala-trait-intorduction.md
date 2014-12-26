@@ -70,11 +70,11 @@ Trait是Scala里的一个新的语言特性,和Java里的interface有点接近,�
 
 输出结果为
 
->In BasicStringSource, content is 'Hello World'
->In Uppercase, content is 'HELLO WORLD'
->In Reverse, content is 'DLROW OLLEH'
->In Pad, content is 'DLROW OLLEH*********'
->DLROW OLLEH*********
+	>In BasicStringSource, content is 'Hello World'
+	>In Uppercase, content is 'HELLO WORLD'
+	>In Reverse, content is 'DLROW OLLEH'
+	>In Pad, content is 'DLROW OLLEH*********'
+	>DLROW OLLEH*********
 
 对象 `source1` 的声明顺序是 `BasicStringSource -> Uppercase -> Reverse -> Pad`, 但根据以上输出可得出
 
