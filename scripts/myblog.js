@@ -14,7 +14,7 @@
        ]).directive('ngMarkdown', function() {
          return function(scope, element, attrs) {
            return scope.$watch(attrs.ngMarkdown, function(value) {
-             var el, html, _i, _len, _ref;
+             var html;
              if (value != null) {
                html = converter.makeHtml(value);
                element.html(html);
