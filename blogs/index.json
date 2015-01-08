@@ -1,15 +1,15 @@
 [
 	{
-	    "title": "Scala Trait",
-	    "path": "2014-10-20-scala-trait-intorduction",
-	    "tags": ["Scala"],
-	    "date": "2014-10-20"    	
-	}, {
         "title": "Maven与私服Apache Archiva配置的一些问题汇总",
         "path": "2013-06-06-maven-archiva-issues",
         "tags": ["Java"],
         "date": "2013-06-06"
     }, {
+	    "title": "Scala Trait",
+	    "path": "2014-10-20-scala-trait-intorduction",
+	    "tags": ["Scala"],
+	    "date": "2014-10-20"    	
+	}, {
         "title": "基于AKKA的DDD/CQRS实现",
         "path": "2015-01-05-akka-ddd-cqrs-1",
         "tags": ["Scala", "Akka", "DDD"],
