@@ -9,5 +9,10 @@
         "path": "2013-06-06-maven-archiva-issues",
         "tags": ["Java"],
         "date": "2013-06-06"
+    }, {
+        "title": "基于AKKA的DDD/CQRS实现",
+        "path": "2015-01-05-akka-ddd-cqrs-1",
+        "tags": ["Scala", "Akka", "DDD"],
+        "date": "2015-01-08"
     }
 ]
