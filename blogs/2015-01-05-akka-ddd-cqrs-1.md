@@ -1,5 +1,6 @@
 基于AKKA的DDD/CQRS实现
-=========================
+-------
+***
 
 最近读了一个关于用AKKA来实现DDD/CQRS(Domain-Driven Design/Command Query Responsibility Segregation)的系列文章,之前对DDD和CQRS也有些学习了解,感觉对于传统三层架构而言(`Action/Controller -> Service -> DAO`),由于DDD专注于领域分析与抽象,使用DDD架构建立起领域模型,更有利于提高系统复用性与独立性, 关于DDD可以进一步参阅Jdon.com上的[这篇文章](http://www.jdon.com/ddd.html).
 
@@ -15,3 +16,7 @@ Akka是使用Scala开发的基于Actor模型的并发处理平台, 其核心思�
 2. [Reactive DDD with Akka - lesson 2](http://pkaczor.blogspot.com/2014/04/reactive-ddd-with-akka-lesson-2.html)
 3. [Reactive DDD with Akka - lesson 3 (Projections)](http://pkaczor.blogspot.com/2014/06/reactive-ddd-with-akka-projections.html) 
 
+ _(END)_ 
+ 
+*** 
+ _post on 2015-01-08 by wanhong_
