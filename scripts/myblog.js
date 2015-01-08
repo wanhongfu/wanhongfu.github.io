@@ -44,6 +44,9 @@
 	  app.controller('PostCtrl', function($scope, $http, $routeParams, indexService) {		  
 	    return $http.get("blogs/" + $routeParams.postPath + ".md").success(function(data) {
 	      $scope.postContent = data;
+	      $scope.threadKey = $routeParams.postPath;
+	      $scope.postTitle = "基于AKKA的DDD/CQRS实现"
+	      $scope.postUrl = location.href
 	    });
 	  });
 	
