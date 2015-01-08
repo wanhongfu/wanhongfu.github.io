@@ -1,6 +1,17 @@
 (function() {
 	var app;
 	var converter = new Showdown.converter();
+	
+	resetDisqus = function(identifier) {
+	    if (typeof DISQUS !== "undefined" && DISQUS !== null) {
+	      return DISQUS.reset({
+	        reload: true,
+	        config: function() {
+	          this.page.identifier = identifier;
+	        }
+	      });
+	    }
+	  };
 
 	app = angular.module('blog', ['ngSanitize']).config([
          '$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
@@ -43,10 +54,8 @@
 
 	  app.controller('PostCtrl', function($scope, $http, $routeParams, indexService) {		  
 	    return $http.get("blogs/" + $routeParams.postPath + ".md").success(function(data) {
-	      $scope.postContent = data;
-	      $scope.threadKey = $routeParams.postPath;
-	      $scope.postTitle = "基于AKKA的DDD/CQRS实现"
-	      $scope.postUrl = location.href
+	      $scope.postContent = data;	      
+	      resetDisqus($routeParams.postPath)
 	    });
 	  });
 	
