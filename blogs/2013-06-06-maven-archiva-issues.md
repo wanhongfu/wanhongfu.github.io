@@ -29,7 +29,4 @@
 
  从Artifact的官方上看到其实有很多种方法([请看这里](http://archiva.apache.org/docs/1.3.6/userguide/deploy.html)),最简单的就是从Archiva的web 页面上找到Upload Artifact这个功能. 我使用的方法是maven的 deploy:deploy-file 命令,这种方法时要注意的是如果你要安装的jar和pom是位于本地repository的目录下,这个命令就会出错 (Cannot deploy artifact from the local repository…), 解决方法:将要安装的jar和pom copy到其它目录再安装,只要不在本地仓库目录都应该可以.
  
- _(END)_ 
- 
-*** 
- _post on 2013-06-06 by wanhong_
+ _(END)_

@@ -1,13 +1,15 @@
-<div class="bs-docs-section" ng-controller="PostCtrl">
+<div ng-controller="PostCtrl">
 	<div class="row">
-		<div class="col-lg-10">
-			<div class="well bs-component" id="post">
+		<div class="col-lg-12">
+			<div class="well" id="post">
+				<a href="index.html" class="btn btn-link"><i class="glyphicon glyphicon-home"></i>&nbsp;Home</a>
 				<div ng-markdown="postContent"></div>
-                <a href="index.html" class="btn btn-link"><i class="icon icon-material-chevron-left"></i>&nbsp;Back</a>
+				<hr>
+				<a href="index.html" class="btn btn-link"><i class="glyphicon glyphicon-home"></i>&nbsp;Home</a>
 			</div>
 		</div>
 	</div>
 	
-	<div id="disqus_thread"/>
+	<div id="disqus_thread"></div>
 	
 </div>

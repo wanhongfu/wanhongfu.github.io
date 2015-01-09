@@ -17,6 +17,3 @@ Akka是使用Scala开发的基于Actor模型的并发处理平台, 其核心思�
 3. [Reactive DDD with Akka - lesson 3 (Projections)](http://pkaczor.blogspot.com/2014/06/reactive-ddd-with-akka-projections.html) 
 
  _(END)_ 
- 
-*** 
- _post on 2015-01-08 by wanhong_

@@ -46,7 +46,7 @@
          return indexService;
        });
 	
-	app.controller('IndexListCtrl', function($scope, $routeParams, indexService) {
+	  app.controller('IndexListCtrl', function($scope, $routeParams, indexService) {
 	    return indexService.async().then(function(data) {	    	
 	      $scope.indexList = data;
 	    });
@@ -54,8 +54,8 @@
 
 	  app.controller('PostCtrl', function($scope, $http, $routeParams, indexService) {		  
 	    return $http.get("blogs/" + $routeParams.postPath + ".md").success(function(data) {
-	      $scope.postContent = data;	      
-	      resetDisqus($routeParams.postPath)
+	      $scope.postContent = data;
+	      resetDisqus($routeParams.postPath);
 	    });
 	  });
 	

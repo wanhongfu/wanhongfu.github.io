@@ -88,6 +88,3 @@ Trait是Scala里的一个新的语言特性,和Java里的interface有点接近,�
 其实以上介绍的特性又叫 **Stakable Modification**, 参考"Scala编程"这本书里的翻译叫**可堆叠的改变**,有点拗口,大致意思是Trait可以让你改变类方法的行为，它们能够让你通过堆叠这些改动的方式做到这点, StackOverflow上有这样[一篇关于 Stackable Modification 回答](http://stackoverflow.com/questions/852101/what-are-stackable-modifications), 可以参考一下.
 
  _(END)_ 
- 
-*** 
- _post on 2014-10-20 by wanhong_
