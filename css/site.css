@@ -30,6 +30,10 @@ body {
 	margin-top: 10px;
 }
 
+.blog-items {
+	padding: 5px 10px 5px 10px;
+}
+
 .list_a_item {
 	border-bottom: 1px dashed #ececec;
 }
@@ -41,6 +45,7 @@ body {
 	width: 100%;
 	background: transparent;
 	margin: 0;
+	margin: 1px 0;
 }
 
 .list_a_item .title {
