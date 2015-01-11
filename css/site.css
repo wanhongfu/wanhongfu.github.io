@@ -58,3 +58,7 @@ body {
 .list_a_item .title .list_a_item_sub .tag {
 	margin-left: 20px
 }
+
+.top_link{
+	text-align: right;	
+}

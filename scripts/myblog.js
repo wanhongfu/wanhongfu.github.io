@@ -12,6 +12,11 @@
 	      });
 	    }
 	  };
+	  
+	gotoTop = function() {
+		scrollTo(0, 0);
+		return false;
+	}
 
 	app = angular.module('blog', ['ngSanitize']).config([
          '$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
