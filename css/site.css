@@ -22,16 +22,25 @@ body {
 	border-top: 2px solid;
 	border-color: #eaedee;
 	border-color: rgba(0, 39, 59, .08);
-	margin-top: 20px
+	margin-top: 20px;
 }
 
 .footer-desc {
 	text-align: center;
-	margin-top: 10px
+	margin-top: 10px;
 }
 
 .list_a_item {
 	border-bottom: 1px dashed #ececec;
+}
+
+.item_title {
+	border: none;
+	list-style: none;
+	display: table;
+	width: 100%;
+	background: transparent;
+	margin: 0;
 }
 
 .list_a_item .title {
