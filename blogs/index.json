@@ -1,5 +1,10 @@
 [
 	{
+	    "title": "Angular2简介",
+	    "path": "2016-01-05-angular2-overview",
+	    "tags": ["JavaScript"],
+	    "date": "2016-01-05"
+	}, {
         "title": "基于AKKA的DDD/CQRS实现",
         "path": "2015-01-05-akka-ddd-cqrs-1",
         "tags": ["Scala", "Akka", "DDD"],
@@ -14,10 +19,5 @@
         "path": "2013-06-06-maven-archiva-issues",
         "tags": ["Java"],
         "date": "2013-06-06"
-    } , {
-        "title": "Angular2简介",
-        "path": "2016-01-05-angular2-overview",
-        "tags": ["JavaScript"],
-        "date": "2016-01-05"
-    }
+    } 
 ]
