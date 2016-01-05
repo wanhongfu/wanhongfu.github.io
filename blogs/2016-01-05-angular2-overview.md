@@ -13,7 +13,28 @@ Angular2简介
 
 ## 模块化(The Module)
 
-基于Angular2应该是模块化的，即是"高内聚低耦合"的，
+基于Angular2应该是模块化的，即是"高内聚低耦合"的，一般来讲，Angular2里的Module即为导出的(export)一个可复用的组件类(Component Class), 组件是Angular的基本组成单元，如下代码:
+
+    export class AppComponent implements OnInit {
+        public title = 'Tour of Heroes';
+        public selectedHero: Hero;
+        public heroes: Hero[];
+
+        constructor(private _heroService: HeroService) {}
+
+        getHeroes() {
+            this.heroes = this._heroService.getHeroes();
+        }
+
+        onSelect(hero: Hero) {
+            this.selectedHero = hero;
+        }
+
+        ngOnInit() {
+            this.getHeroes();
+        }
+    }
+        
 
 ## 组件(Component）
 
