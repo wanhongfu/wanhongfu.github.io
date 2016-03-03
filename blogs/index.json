@@ -1,7 +1,7 @@
 [
 	{
-	    "title": "Angular2简介",
-	    "path": "2016-01-05-angular2-overview",
+	    "title": "React JSX调用类方法总结",
+	    "path": "2016-01-05-jsx-bind-func-ways",
 	    "tags": ["JavaScript"],
 	    "date": "2016-01-05"
 	}, {
@@ -19,5 +19,5 @@
         "path": "2013-06-06-maven-archiva-issues",
         "tags": ["Java"],
         "date": "2013-06-06"
-    } 
+    }
 ]
