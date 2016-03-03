@@ -1,5 +1,6 @@
 React JSX调用类方法总结
 -------
+***
 
 ### 1. 使用 `Function.prototype.bind()`
 
