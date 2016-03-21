@@ -27,7 +27,7 @@
 	
 	React.render(<TextComponent>Hello World</TextComponent>, document.body);
 	
-这种组件Facebook的react-v0.14的release notes中称之为`Functional Stateless Component`, 通常都是指那些功能比较简单且没有状态(`state`)、只需传递props即可的组件，引用官方的一句话:
+这种组件Facebook的react-v0.14的release notes中称之为`Functional Stateless Component`, 通常都是指那些功能比较简单、没有状态(`state`)、不需要在lifecycle方法中加入逻辑且只需传递props即可的组件，引用官方的一句话:
 
 >This pattern is designed to encourage the creation of these simple components that should comprise large portions of your apps. In the future, we’ll also be able to make performance optimizations specific to these components by avoiding unnecessary checks and memory allocations.
 
