@@ -57,7 +57,7 @@
 	called closeInternal(true)
 
 其中，`TLSv1`为Https的安全协议，由代码`SSLContext.getInstance("TLS")`指定；
-而`SSLv2`为协议版本，通常由`SSLSocket.setEnabledCipherSuites(String[] suites)`指定，但我们代码并未指定该协议版本，在JDK6中会使用默认的版本`SSLv2`(JDK7则为`TLSv1`)，从而导致以上的错误。
+而`SSLv2`为协议版本，通常由代码`SSLSocket.setEnabledCipherSuites(String[] suites)`指定，但我们代码并未指定该协议版本，该情况下在JDK6中会使用默认的版本`SSLv2`，从而导致以上的错误。
 查阅文档后发现，协议版本除了通过`SSLSocket.setEnabledCipherSuites`来指定外，还可通过jvm参数来指定:
 
 	-Dhttps.protocols="TLSv1"
@@ -73,4 +73,5 @@
 	WRITE: TLSv1 Alert, length = 32
 	called closeSocket(selfInitiated)
 
-
+参考:
+[Why does Java's SSLSocket send a version 2 client hello?](http://stackoverflow.com/questions/4682957/why-does-javas-sslsocket-send-a-version-2-client-hello/4686924#4686924)
