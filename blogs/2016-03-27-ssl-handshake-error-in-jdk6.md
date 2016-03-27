@@ -73,5 +73,5 @@
 	WRITE: TLSv1 Alert, length = 32
 	called closeSocket(selfInitiated)
 
-参考:
-[Why does Java's SSLSocket send a version 2 client hello?](http://stackoverflow.com/questions/4682957/why-does-javas-sslsocket-send-a-version-2-client-hello/4686924#4686924)
+
+参考: [Why does Java's SSLSocket send a version 2 client hello?](http://stackoverflow.com/questions/4682957/why-does-javas-sslsocket-send-a-version-2-client-hello/4686924#4686924)
