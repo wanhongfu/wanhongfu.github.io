@@ -36,32 +36,31 @@ Trait是Scala里的一个新的语言特性,和Java里的interface有点接近,�
 		}
 	} 
 
-
 以下我们定义了抽象的字符串源类, 接着我们定义了一个基本的字符串源的实现类 `BasicStringSource`, 接下来我们再定义三个继承抽象类 `StringSource` 的字符串操作的 trait.
 
-trait Uppercase extends StringSource {
-	abstract override def getContent(): String = {
-		val content = super.getContent().toUpperCase
-		println(s"In Uppercase, content is '$content'")
-		content
+	trait Uppercase extends StringSource {
+	  abstract override def getContent(): String = {
+	      val content = super.getContent().toUpperCase
+	      println(s"In Uppercase, content is '$content'")
+	      content
+	  }
 	}
-}
 	
-trait Reverse extends StringSource {
-	abstract override def getContent(): String = {
-		val content = super.getContent().reverse
-		println(s"In Reverse, content is '$content'")
-		content
+	trait Reverse extends StringSource {
+	    abstract override def getContent(): String = {
+	        val content = super.getContent().reverse
+	        println(s"In Reverse, content is '$content'")
+	        content
+	    }
 	}
-}
-
-trait Pad extends StringSource {
-	abstract override def getContent(): String = {
-		val content = super.getContent().padTo(20, '*')
-		println(s"In Pad, content is '$content'")
-		content
+	
+	trait Pad extends StringSource {
+	    abstract override def getContent(): String = {
+	        val content = super.getContent().padTo(20, '*')
+	        println(s"In Pad, content is '$content'")
+	        content
+	    }
 	}
-}
 
 我们分别定义了 `Uppercase`, `Reverse`, `Pad` 三个trait实现对 `StringSource` 中的抽象函数 `getContent()` 进行 _override_, 注意这里的 **abstract override** 是必须的. 为了便于观察,每个实现函数中我都添加了 `println()` 语句, 我们再用以下代码来进行测试
 
