@@ -1,6 +1,6 @@
 (function() {
 	var app;
-	var converter = new Showdown.converter();
+	var converter = new showdown.converter();
 	
 	resetDisqus = function(identifier) {
 	    if (typeof DISQUS !== "undefined" && DISQUS !== null) {
