@@ -1,6 +1,7 @@
 (function() {
 	var app;
-	var converter = new showdown.converter();
+  var converter = new showdown.Converter();
+  converter.setFlavor('github');
 	
 	resetDisqus = function(identifier) {
 	    if (typeof DISQUS !== "undefined" && DISQUS !== null) {
