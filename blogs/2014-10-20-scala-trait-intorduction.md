@@ -8,28 +8,23 @@ Trait是Scala里的一个新的语言特性,和Java里的interface有点接近,�
 
 例如以下为错误代码:
 
-```scala
-trait Student(age: Int) {		
-}
-```
+	trait Student(age: Int) {		
+	}
 
 上面的代码是想在构造trait里传递参数给实例,但想想trait是类似于Java里的interface,怎么可能可以指定构造参数? 但问题总是有解决办法的,要想在trait里达到该目的,Scala为我们提供了抽象 `val`, 代码如下:
 
-```scala
-trait Student {
-	val age: Int
-}
-
-new Student {
-	val age = 15
-}
-```
+	trait Student {
+		val age: Int
+	}
+		
+	new Student {
+		val age = 15
+	}
 
 ###2. Trait 的 `super`  
 
 在trait里, `super` 是动态绑定的(dynamic bound), 其行为要看该trait被织入(mixed into)的具体类才能决定, 假设我们有如下代码:
-​	
-```scala
+
 	abstract class StringSource {
 		def getContent(): String
 	}
@@ -40,11 +35,11 @@ new Student {
 		  content
 		}
 	} 
-```
+
 
 以下我们定义了抽象的字符串源类, 接着我们定义了一个基本的字符串源的实现类 `BasicStringSource`, 接下来我们再定义三个继承抽象类 `StringSource` 的字符串操作的 trait.
 
-```scala
+```
 trait Uppercase extends StringSource {
 	abstract override def getContent(): String = {
 		val content = super.getContent().toUpperCase
@@ -71,10 +66,10 @@ trait Pad extends StringSource {
 ```
 
 我们分别定义了 `Uppercase`, `Reverse`, `Pad` 三个trait实现对 `StringSource` 中的抽象函数 `getContent()` 进行 _override_, 注意这里的 **abstract override** 是必须的. 为了便于观察,每个实现函数中我都添加了 `println()` 语句, 我们再用以下代码来进行测试
-```scala
+
 	val source1 = new BasicStringSource("Hello World") with Uppercase with Reverse with Pad
 	println(source1.getContent)
-```
+
 输出结果为
 
 	>In BasicStringSource, content is 'Hello World'
